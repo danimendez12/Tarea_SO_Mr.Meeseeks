@@ -1,0 +1,68 @@
+===== MENU EN CADENA =====
+==============================================
+   Box de Mr. Meeseeks  (Tarea 2 — SO)
+   Daniel Mendez Romero  2022437806
+==============================================
+
+--- Menú ---
+1) Solicitud textual
+2) Cálculo aritmético/lógico
+3) Ejecutar programa externo
+4) Configuración  (timeout=300s, dificultad=usuario, max_live=64, max_N=8, exp=no)
+5) Adiós (cerrar Box e informe)
+Opción: Solicitud: Dificultad (0=imposible ... 100=muy fácil): Tiempo de simulación en segundos (Enter = aleatorio 0.5-5, o el default): Hi, I'm Mr. Meeseeks! Look at Meeeee. (65994, 65992, 1, 1)
+[pid=65994 ppid=65992 N=1 i=1] solicitud textual "Quiero un cafe frances" d=100.00; simularé 0.30s (ese tiempo NO se reporta)
+[pid=65994 ppid=65992 N=1 i=1] solicitud completada. Gracias por dejarme servir. Existence is pain!
+
+[Box] Solicitud RESUELTA por Mr. Meeseeks (pid=65994, ppid=65992, N=1, i=1)
+[Box] Detalle: I'm Mr. Meeseeks! Look at me!
+[Box] t_pared=0.3018s  t_sim_max=0.3011s  t_real=0.0007s  meeseeks=1
+
+--- Menú ---
+1) Solicitud textual
+2) Cálculo aritmético/lógico
+3) Ejecutar programa externo
+4) Configuración  (timeout=300s, dificultad=usuario, max_live=64, max_N=8, exp=no)
+5) Adiós (cerrar Box e informe)
+Opción: Expresión: Hi, I'm Mr. Meeseeks! Look at Meeeee. (65995, 65992, 1, 1)
+[pid=65995 ppid=65992 N=1 i=1] calculando: 2+3*4
+[pid=65995 ppid=65992 N=1 i=1] solicitud de cálculo completada: 2+3*4 = 14. ¡Gracias! Can do!
+
+[Box] Solicitud RESUELTA por Mr. Meeseeks (pid=65995, ppid=65992, N=1, i=1)
+[Box] Detalle: 2+3*4 = 14
+[Box] t_pared=0.0010s  t_sim_max=0.0000s  t_real=0.0010s  meeseeks=1
+
+--- Menú ---
+1) Solicitud textual
+2) Cálculo aritmético/lógico
+3) Ejecutar programa externo
+4) Configuración  (timeout=300s, dificultad=usuario, max_live=64, max_N=8, exp=no)
+5) Adiós (cerrar Box e informe)
+Opción: Comando (ej. /bin/echo hola  o  false): Hi, I'm Mr. Meeseeks! Look at Meeeee. (65996, 65992, 1, 1)
+[pid=65996 ppid=65992 N=1 i=1] ejecutando programa externo: /bin/echo hola-box
+hola-box
+[pid=65996 ppid=65992 N=1 i=1] programa externo OK. Gracias por dejarme ayudar. Existence is pain!
+
+[Box] Solicitud RESUELTA por Mr. Meeseeks (pid=65996, ppid=65992, N=1, i=1)
+[Box] Detalle: programa terminó con éxito (0)
+[Box] t_pared=0.0064s  t_sim_max=0.0000s  t_real=0.0064s  meeseeks=1
+
+--- Menú ---
+1) Solicitud textual
+2) Cálculo aritmético/lógico
+3) Ejecutar programa externo
+4) Configuración  (timeout=300s, dificultad=usuario, max_live=64, max_N=8, exp=no)
+5) Adiós (cerrar Box e informe)
+Opción: 
+============== INFORME DEL BOX ==============
+Tareas solicitadas : 3
+Completadas        : 3
+No completadas     : 0
+Meeseeks totales   : 3
+  [1] textual  t_real=0.0007s  meeseeks=1  OK  I'm Mr. Meeseeks! Look at me!
+  [2] cálculo  t_real=0.0010s  meeseeks=1  OK  2+3*4 = 14
+  [3] externo  t_real=0.0064s  meeseeks=1  OK  programa terminó con éxito (0)
+=============================================
+Look at me! The Box is closed.
+===== procesos residuales =====
+ningun meeseeks_box vivo

@@ -1,0 +1,59 @@
+===== EXPERIMENTO 0x02 (timeout sin matar) =====
+==============================================
+   Box de Mr. Meeseeks  (Tarea 2 — SO)
+   Daniel Mendez Romero  2022437806
+==============================================
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65931, 65930, 1, 1)
+[pid=65931 ppid=65930 N=1 i=1] solicitud textual "tiempo extra" d=70.00; simularé 0.50s (ese tiempo NO se reporta)
+[pid=65931 ppid=65930 N=1 i=1] evalué ayuda (d=70.00 → 2 hijos, aging d'=82.00)
+[pid=65931 ppid=65930 N=1 i=1] necesito ayuda: crearé 2 Mr. Meeseeks (N=2, d_hijo=82.00)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65932, 65931, 2, 1)
+[pid=65932 ppid=65931 N=2 i=1] solicitud textual "tiempo extra" d=82.00; simularé 0.50s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65933, 65931, 2, 2)
+[pid=65933 ppid=65931 N=2 i=2] solicitud textual "tiempo extra" d=82.00; simularé 0.50s (ese tiempo NO se reporta)
+
+[experimento] venció el tiempo máximo (1.0s) y NO se mata el árbol.
+Midiendo tiempo adicional hasta terminar...
+[pid=65932 ppid=65931 N=2 i=1] evalué ayuda (d=82.00 → 2 hijos, aging d'=89.20)
+[pid=65932 ppid=65931 N=2 i=1] necesito ayuda: crearé 2 Mr. Meeseeks (N=3, d_hijo=89.20)
+[pid=65933 ppid=65931 N=2 i=2] evalué ayuda (d=82.00 → 2 hijos, aging d'=89.20)
+[pid=65933 ppid=65931 N=2 i=2] necesito ayuda: crearé 2 Mr. Meeseeks (N=3, d_hijo=89.20)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65935, 65932, 3, 1)
+[pid=65935 ppid=65932 N=3 i=1] solicitud textual "tiempo extra" d=89.20; simularé 0.50s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65936, 65933, 3, 1)
+[pid=65936 ppid=65933 N=3 i=1] solicitud textual "tiempo extra" d=89.20; simularé 0.50s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65937, 65932, 3, 2)
+[pid=65937 ppid=65932 N=3 i=2] solicitud textual "tiempo extra" d=89.20; simularé 0.50s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65938, 65933, 3, 2)
+[pid=65938 ppid=65933 N=3 i=2] solicitud textual "tiempo extra" d=89.20; simularé 0.50s (ese tiempo NO se reporta)
+[pid=65935 ppid=65932 N=3 i=1] solicitud completada. Gracias por dejarme servir. Existence is pain!
+[pid=65936 ppid=65933 N=3 i=1] solicitud completada. Gracias por dejarme servir. Existence is pain!
+[pid=65932 ppid=65931 N=2 i=1] un hijo resolvió (pid=65935 N=3 i=1); aviso a hermanos
+[pid=65933 ppid=65931 N=2 i=2] un hijo resolvió (pid=65936 N=3 i=1); aviso a hermanos
+[pid=65937 ppid=65932 N=3 i=2] Caaann doooo... goodbye! (me abortaron)
+[pid=65938 ppid=65933 N=3 i=2] Caaann doooo... goodbye! (me abortaron)
+[pid=65932 ppid=65931 N=2 i=1] propago éxito de pid=65935 (N=3,i=1) hacia mi padre y me despido
+[pid=65932 ppid=65931 N=2 i=1] Caaann doooo... goodbye! (misión cumplida por un descendiente)
+[pid=65931 ppid=65930 N=1 i=1] un hijo resolvió (pid=65935 N=3 i=1); aviso a hermanos
+[pid=65933 ppid=65931 N=2 i=2] propago éxito de pid=65936 (N=3,i=1) hacia mi padre y me despido
+[pid=65933 ppid=65931 N=2 i=2] Caaann doooo... goodbye! (misión cumplida por un descendiente)
+[pid=65931 ppid=65930 N=1 i=1] propago éxito de pid=65935 (N=3,i=1) hacia mi padre y me despido
+[pid=65931 ppid=65930 N=1 i=1] Caaann doooo... goodbye! (misión cumplida por un descendiente)
+
+[Box] Solicitud RESUELTA por Mr. Meeseeks (pid=65935, ppid=65932, N=3, i=1)
+[Box] Detalle: I'm Mr. Meeseeks! Look at me!
+[Box] t_pared=1.5071s  t_sim_max=0.5011s  t_real=1.0059s  meeseeks=7
+
+============== INFORME DEL BOX ==============
+Tareas solicitadas : 1
+Completadas        : 1
+No completadas     : 0
+Meeseeks totales   : 7
+  [1] textual  t_real=1.0059s  meeseeks=7  OK  I'm Mr. Meeseeks! Look at me!
+=============================================
+Look at me! The Box is closed.
+real 1.50
+user 0.00
+sys 0.00
+===== ps residual (debe estar vacio de meeseeks_box hijos) =====
+ningun meeseeks_box vivo

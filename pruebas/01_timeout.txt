@@ -1,0 +1,45 @@
+===== TIMEOUT / CAOS PLANETARIO =====
+==============================================
+   Box de Mr. Meeseeks  (Tarea 2 — SO)
+   Daniel Mendez Romero  2022437806
+==============================================
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65865, 65864, 1, 1)
+[pid=65865 ppid=65864 N=1 i=1] solicitud textual "caos planetario" d=0.00; simularé 2.00s (ese tiempo NO se reporta)
+[pid=65865 ppid=65864 N=1 i=1] evalué ayuda (d=0.00 → 9 hijos, aging d'=0.00)
+[pid=65865 ppid=65864 N=1 i=1] necesito ayuda: crearé 9 Mr. Meeseeks (N=2, d_hijo=0.00)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65873, 65865, 2, 1)
+[pid=65873 ppid=65865 N=2 i=1] solicitud textual "caos planetario" d=0.00; simularé 2.00s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65874, 65865, 2, 2)
+[pid=65874 ppid=65865 N=2 i=2] solicitud textual "caos planetario" d=0.00; simularé 2.00s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65875, 65865, 2, 3)
+[pid=65875 ppid=65865 N=2 i=3] solicitud textual "caos planetario" d=0.00; simularé 2.00s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65876, 65865, 2, 4)
+[pid=65876 ppid=65865 N=2 i=4] solicitud textual "caos planetario" d=0.00; simularé 2.00s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65877, 65865, 2, 5)
+[pid=65877 ppid=65865 N=2 i=5] solicitud textual "caos planetario" d=0.00; simularé 2.00s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65878, 65865, 2, 6)
+[pid=65878 ppid=65865 N=2 i=6] solicitud textual "caos planetario" d=0.00; simularé 2.00s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65879, 65865, 2, 7)
+[pid=65879 ppid=65865 N=2 i=7] solicitud textual "caos planetario" d=0.00; simularé 2.00s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65880, 65865, 2, 8)
+[pid=65880 ppid=65865 N=2 i=8] solicitud textual "caos planetario" d=0.00; simularé 2.00s (ese tiempo NO se reporta)
+Hi, I'm Mr. Meeseeks! Look at Meeeee. (65881, 65865, 2, 9)
+[pid=65881 ppid=65865 N=2 i=9] solicitud textual "caos planetario" d=0.00; simularé 2.00s (ese tiempo NO se reporta)
+
+*** CAOS PLANETARIO *** timeout de 3.0s. Terminando el árbol (pgid=65865).
+
+[Box] Caos planetario. Tarea NO completada.
+[Box] t_pared=4.0032s  t_sim_max=2.0010s  t_real=2.0022s  meeseeks=10
+
+============== INFORME DEL BOX ==============
+Tareas solicitadas : 1
+Completadas        : 0
+No completadas     : 1
+Meeseeks totales   : 10
+  [1] textual  t_real=2.0022s  meeseeks=10  NO  caos planetario (timeout)
+=============================================
+Look at me! The Box is closed.
+real 4.00
+user 0.00
+sys 0.00
+===== EXIT:  =====

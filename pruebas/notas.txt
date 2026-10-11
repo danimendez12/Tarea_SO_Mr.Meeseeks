@@ -1,0 +1,37 @@
+Pruebas — rama Pruebas
+Fecha: 11 de octubre de 2026
+Binario: ./meeseeks_box (macOS)
+
+1) Timeout / caos planetario  (pruebas/01_timeout.txt)
+   Comando:
+     ./meeseeks_box --text "caos planetario" --diff 0 --sim 2 --timeout 3 --max-depth 8 --max-live 64
+   Resultado:
+     - Nacen el original + 9 hijos (N=2) con d=0.
+     - A los 3 s el Box imprime CAOS PLANETARIO y mata el pgid.
+     - t_pared ≈ 4.00 s (timeout 3 s + 1 s de gracia antes de SIGKILL).
+     - t_real ≈ 2.00 s (se restó sim_max ≈ 2 s).
+     - Tarea NO completada. meeseeks=10.
+     - Al terminar no quedó ningún meeseeks_box vivo (pgrep).
+
+2) Experimento 0x02  (pruebas/02_experimento.txt)
+   Comando:
+     ./meeseeks_box --experiment --text "tiempo extra" --diff 70 --sim 0.5 --timeout 1 --max-depth 6
+   Resultado:
+     - El timeout de 1.0 s vence DURANTE N=2 (aún simulando).
+     - El Box NO mata el árbol; sigue midiendo.
+     - Aging: 70 → 82 → 89.20. Resuelve N=3,i=1 (pid 65935).
+     - Hermanos N=3,i=2 abortados (“me abortaron”).
+     - t_pared = 1.5071 s  =>  tiempo EXTRA ≈ 0.51 s respecto al máximo.
+     - t_real = 1.0059 s (sim_max 0.50 s restado). meeseeks=7. OK.
+     - Conclusión: con d=70 y sim 0.5 s hacen falta ~1.5 s de pared
+       (tres niveles); un tope de 1 s se queda corto ~0.5 s (un sleep más).
+
+3) Menú en cadena  (pruebas/03_menu_cadena.txt)
+   Entrada: textual d=100 sim=0.3, cálculo 2+3*4, exec /bin/echo hola-box, Adiós.
+   Informe:
+     3 tareas, 3 OK, 0 NO, 3 Meeseeks en total.
+     [1] textual t_real=0.0007s
+     [2] cálculo t_real=0.0010s  (14)
+     [3] externo t_real=0.0064s
+   El Box sigue vivo entre solicitudes (mismo PID padre 65992).
+   Al salir no quedaron procesos residuales.
